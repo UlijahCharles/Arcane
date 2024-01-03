@@ -1,13 +1,10 @@
-import { motion } from "framer-motion";
-
+import About from "../components/About";
+import Intro from "../components/Intro";
 function Home() {
   return (
     <>
-      <motion.div
-        className="box"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-      />
+      <Intro />
+      <About />
     </>
   );
 }

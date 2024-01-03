@@ -1,5 +1,7 @@
 @forward "./components/index";
 
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Comfortaa:wght@300&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
@@ -8,11 +10,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  --fs-h1: clamp(3.5rem, 7vw + 1rem, 12rem);
+  --fs-p: clamp(1.6rem, 4vw, 5.5rem);
+  --fs-creators: clamp(3rem, 4vw, 8rem);
+  --fs-trailer: clamp(16rem, 24vw, 30rem);
 }
 
+:root::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
 html {
-  box-sizing: border box;
+  box-sizing: border-box;
   font-size: 100%;
+  background-color: #242424;
+  scroll-snap-type: y mandatory;
 }
 
 *,
@@ -24,6 +37,10 @@ html {
 body {
   margin: 0;
   padding: 0;
+}
+
+header {
+  scroll-snap-align: start;
 }
 
 h1,
@@ -42,4 +59,26 @@ a,
 a:visited,
 a:active {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+section {
+  height: 105vh;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
